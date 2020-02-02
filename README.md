@@ -1,4 +1,9 @@
 ## PLEASE READ THIS NOTE
+THIS BRANCH CONTAINS THE CODE FOR COMING UPDATES. THIS IS UNDER DEVELOPMENT, DO NOT USE THIS UNLESS YOU ARE OKAY WITH HAVING SOME BUGS OR PERFORMANCE ISSUES.
+
+IF YOU WANT TO USE THE LATEST STABLE VERSION, CHECK OUT MASTER BRANCH AT 
+https://github.com/ankith26/My-PyChess
+
 Thanks for showing interest in my project. I know the code is a bit messy, it still works well.
 In the next update I add either online play or upgrade singleplayer.
 
