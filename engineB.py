@@ -135,13 +135,34 @@ def animate(win, side, wboard, bboard, lst, to):
     return
 
 def prompt(win, msg=""):
-    pygame.draw.rect(win, (0,0,0), (70, 140, 360, 180))
-    pygame.draw.rect(win, (255,255,255), (70, 140, 360, 180), 4)
-    win.blit(MESSAGE1, (92,140))
-    win.blit(MESSAGE2, (142,180))
+    pygame.draw.rect(win, (0,0,0), (70, 140, 360, 170))
+    pygame.draw.rect(win, (255,255,255), (70, 140, 360, 170), 4)
+    win.blit(MESSAGE1[0], (95,140))
+    win.blit(MESSAGE1[1], (150,180))
     if msg != "":
         win.blit(MSG, (80, 280))
-        putNum(win, msg, (320, 280), False)
+        putNum(win, msg, (375, 280), False)
+          
+    win.blit(YES, (100, 240))
+    win.blit(NO, (340, 240))
+    pygame.draw.rect(win, (255,255,255), (85, 140, 330, 82), 2)
+    pygame.draw.rect(win, (255,255,255), (100, 240, 60, 30), 2)
+    pygame.draw.rect(win, (255,255,255), (340, 240, 50, 30), 2)
+    pygame.display.flip()
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                x, y = pygame.mouse.get_pos()
+                if 240 < y < 270:
+                    if 100 < x < 160:
+                        return True
+                    elif 340 < x < 390:
+                        return False
+def prompt2(win):
+    pygame.draw.rect(win, (0,0,0), (70, 140, 360, 170))
+    pygame.draw.rect(win, (255,255,255), (70, 140, 360, 170), 4)
+    win.blit(MESSAGE2[0], (92,140))
+    win.blit(MESSAGE2[1], (130,180))
           
     win.blit(YES, (100, 240))
     win.blit(NO, (340,240))

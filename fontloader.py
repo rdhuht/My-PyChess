@@ -13,7 +13,7 @@ Vsmall = pygame.font.Font("FreightSansBold.otf", 18)
 
 #### FOR MAIN ####
 HEADING = head.render("PyChess", True, (255,255,255)).convert_alpha()
-VERSION = Vsmall.render("Version 2.2", True, (255,255,255)).convert_alpha()
+VERSION = Vsmall.render("Version 2.3", True, (255,255,255)).convert_alpha()
 
 SINGLE = medium.render("Single Player", True, (255,255,255)).convert_alpha()
 SINGLE_H = medium.render("Single Player", True, (200,200,200)).convert_alpha()
@@ -46,11 +46,17 @@ CHOOSE = small.render("CHOOSE:", True, (0,0,0)).convert_alpha()
 SAVE = small.render("Save Game", True, (0,0,0)).convert_alpha()
 
 #### FOR PROMPT ###
-MESSAGE1 = small.render("Do you want to go to", True, (255,255,255)).convert_alpha()
-MESSAGE2 = small.render("Home screen?", True, (255,255,255)).convert_alpha()
+MESSAGE1 = [small.render("Do you want to quit", True, (255,255,255)
+                        ).convert_alpha(),
+            small.render("this game?", True, (255,255,255)
+                         ).convert_alpha()]
+MESSAGE2 = [small.render("Do you want to go to", True, (255,255,255)
+                        ).convert_alpha(),
+            small.render("the home menu?", True, (255,255,255)
+                         ).convert_alpha()]
 YES = small.render("YES", True, (255,255,255)).convert_alpha()
 NO = small.render("NO", True, (255,255,255)).convert_alpha()
-MSG = Vsmall.render("The game will be saved with ID", True,
+MSG = Vsmall.render("NOTE: The game will be saved with ID", True,
                     (255,255,255)).convert_alpha()
 
 #### FOR PREF ####

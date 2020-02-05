@@ -27,7 +27,8 @@ def main(win, wmove, wBoard, bBoard, castle):
         clock.tick(30)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                return prompt(win)
+                if prompt(win):
+                    return prompt2(win)
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 x, y = pygame.mouse.get_pos()
                 if 50 < x < 450 and 50 < y < 450:
@@ -37,7 +38,8 @@ def main(win, wmove, wBoard, bBoard, castle):
                 elif 330 < x < 500 and 460 < y < 490:
                     msg = saveGame(wmove, wBoard, bBoard, castle)
                     pygame.display.update()
-                    return prompt(win, msg)
+                    if prompt(win, msg):
+                        return prompt2(win)
         if not end[0]:
             drawBoard(win)
             win.blit(SAVE,(330,460))
