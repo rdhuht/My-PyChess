@@ -1,5 +1,5 @@
 animations = True
-sounds = False
+sounds = True
 slideshow = True
 show-legal-moves = True
 allow-undo = False
